@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+service MyService {
+    rpc MyEndpoint(MyRequest) returns (MyResponse);
+}
+
+message MyRequest {
+    string videoId = 1;
+}
+
+message YoutubeCaption {
+    string text = 1;
+    float start = 2;
+    float duration = 3;
+}
+
+message MyResponse {
+    repeated YoutubeCaption data = 1;
+}

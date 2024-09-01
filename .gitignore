@@ -1,0 +1,41 @@
+youtube-service/.env
+
+youtube-service/__pycache__
+
+youtube-service/.venv
+
+core-service/HELP.md
+core-service/target/
+core-service/!.mvn/wrapper/maven-wrapper.jar
+core-service/!**/src/main/**/target/
+core-service/!**/src/test/**/target/
+
+### STS ###
+core-service/.apt_generated
+core-service/.classpath
+core-service/.factorypath
+core-service/.project
+core-service/.settings
+core-service/.springBeans
+core-service/.sts4-cache
+
+### IntelliJ IDEA ###
+core-service/.idea
+core-service/*.iws
+core-service/*.iml
+core-service/*.ipr
+
+### NetBeans ###
+core-service/nbproject/private/
+core-service/nbbuild/
+core-service/dist/
+core-service/nbdist/
+core-service/.nb-gradle/
+core-service/build/
+core-service/!**/src/main/**/build/
+core-service/!**/src/test/**/build/
+
+### VS Code ###
+core-service/.vscode/
+
+core-service/src/main/resources/application-*.properties
