@@ -1,0 +1,7 @@
+server:
+  port: 8000
+grpc:
+  client:
+    local-grpc-server:
+      address: 'static://127.0.0.1:50051'
+      negotiationType: plaintext

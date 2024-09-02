@@ -1,13 +1,17 @@
-package com.pwang.youtubesummarizer;
+package com.pwang;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * @author Puck Wang
+ * @project core-service
+ * @created 9/2/2024
+ */
 @SpringBootApplication
-public class YoutubeSummarizerApplication {
+public class ClientApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(YoutubeSummarizerApplication.class, args);
+    SpringApplication.run(ClientApplication.class, args);
   }
-
 }
