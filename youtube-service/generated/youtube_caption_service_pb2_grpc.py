@@ -35,7 +35,7 @@ class MyServiceStub(object):
             channel: A grpc.Channel.
         """
         self.MyEndpoint = channel.unary_unary(
-                '/MyService/MyEndpoint',
+                '/com.pwang.proto.MyService/MyEndpoint',
                 request_serializer=proto_dot_youtube__caption__service__pb2.MyRequest.SerializeToString,
                 response_deserializer=proto_dot_youtube__caption__service__pb2.MyResponse.FromString,
                 _registered_method=True)
@@ -60,9 +60,9 @@ def add_MyServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'MyService', rpc_method_handlers)
+            'com.pwang.proto.MyService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
-    server.add_registered_method_handlers('MyService', rpc_method_handlers)
+    server.add_registered_method_handlers('com.pwang.proto.MyService', rpc_method_handlers)
 
 
  # This class is part of an EXPERIMENTAL API.
@@ -83,7 +83,7 @@ class MyService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/MyService/MyEndpoint',
+            '/com.pwang.proto.MyService/MyEndpoint',
             proto_dot_youtube__caption__service__pb2.MyRequest.SerializeToString,
             proto_dot_youtube__caption__service__pb2.MyResponse.FromString,
             options,

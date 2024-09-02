@@ -24,19 +24,19 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#proto/youtube_caption_service.proto\"\x1c\n\tMyRequest\x12\x0f\n\x07videoId\x18\x01 \x01(\t\"?\n\x0eYoutubeCaption\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\r\n\x05start\x18\x02 \x01(\x02\x12\x10\n\x08\x64uration\x18\x03 \x01(\x02\"+\n\nMyResponse\x12\x1d\n\x04\x64\x61ta\x18\x01 \x03(\x0b\x32\x0f.YoutubeCaption22\n\tMyService\x12%\n\nMyEndpoint\x12\n.MyRequest\x1a\x0b.MyResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#proto/youtube_caption_service.proto\x12\x0f\x63om.pwang.proto\"\x1c\n\tMyRequest\x12\x0f\n\x07videoId\x18\x01 \x01(\t\"?\n\x0eYoutubeCaption\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\r\n\x05start\x18\x02 \x01(\x02\x12\x10\n\x08\x64uration\x18\x03 \x01(\x02\";\n\nMyResponse\x12-\n\x04\x64\x61ta\x18\x01 \x03(\x0b\x32\x1f.com.pwang.proto.YoutubeCaption2R\n\tMyService\x12\x45\n\nMyEndpoint\x12\x1a.com.pwang.proto.MyRequest\x1a\x1b.com.pwang.proto.MyResponseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'proto.youtube_caption_service_pb2', _globals)
 if not _descriptor._USE_C_DESCRIPTORS:
   DESCRIPTOR._loaded_options = None
-  _globals['_MYREQUEST']._serialized_start=39
-  _globals['_MYREQUEST']._serialized_end=67
-  _globals['_YOUTUBECAPTION']._serialized_start=69
-  _globals['_YOUTUBECAPTION']._serialized_end=132
-  _globals['_MYRESPONSE']._serialized_start=134
-  _globals['_MYRESPONSE']._serialized_end=177
-  _globals['_MYSERVICE']._serialized_start=179
-  _globals['_MYSERVICE']._serialized_end=229
+  _globals['_MYREQUEST']._serialized_start=56
+  _globals['_MYREQUEST']._serialized_end=84
+  _globals['_YOUTUBECAPTION']._serialized_start=86
+  _globals['_YOUTUBECAPTION']._serialized_end=149
+  _globals['_MYRESPONSE']._serialized_start=151
+  _globals['_MYRESPONSE']._serialized_end=210
+  _globals['_MYSERVICE']._serialized_start=212
+  _globals['_MYSERVICE']._serialized_end=294
 # @@protoc_insertion_point(module_scope)
