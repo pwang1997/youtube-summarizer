@@ -4,14 +4,12 @@ from google.protobuf.json_format import Parse, ParseDict
 from redis_client import RedisClient
 
 class YoutubeCaptionClient:
-    redis_hset_prefix = 'youtube_transcript_'
     
     @staticmethod
     def get_transcript(videoId, **kwargs):
-        key_name = redis_hset_prefix + videoId
+        key_name = 'youtube_transcript_' + videoId
         r = RedisClient()
         transcript = r.get_data(key_name)
-        # transcript = None
 
         if transcript is None:
             print("calling get_transcript on vId:", videoId)

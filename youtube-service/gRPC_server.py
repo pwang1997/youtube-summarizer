@@ -28,7 +28,9 @@ class MyServiceServicer(youtube_caption_service_pb2_grpc.MyServiceServicer):
             
             # Save serialized Protobuf message in Redis
             self.redis_client.set_data(key, serialized_response)
+            print("pushed", "key_name:[", key, "] to redis")
         else:
+            print("retrieved", "key_name:[", key, "] from redis")
             # Deserialize Protobuf message
             response = ProtobufHelper.deserialize_response(transcript)
 
