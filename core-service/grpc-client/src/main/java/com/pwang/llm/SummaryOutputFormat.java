@@ -5,6 +5,6 @@ package com.pwang.llm;
  * @project core-service
  * @created 9/7/2024
  */
-public enum OutputFormat {
+public enum SummaryOutputFormat {
   JSON, String
 }
