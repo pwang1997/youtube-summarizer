@@ -29,6 +29,7 @@
   <modules>
     <module>proto</module>
     <module>grpc-client</module>
+    <module>core</module>
   </modules>
   <scm>
     <connection/>

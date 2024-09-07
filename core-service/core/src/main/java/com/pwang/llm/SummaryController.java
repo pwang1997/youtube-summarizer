@@ -25,12 +25,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/v1/chat")
 @Slf4j
-public class ChatController {
+public class SummaryController {
 
   private final ChatClient chatClient;
   private final CaptionManager captionManager;
 
-  public ChatController(ChatClient.Builder chatClient, CaptionManager captionManager) {
+  public SummaryController(ChatClient.Builder chatClient, CaptionManager captionManager) {
     this.chatClient = chatClient.build();
     this.captionManager = captionManager;
   }
@@ -71,11 +71,11 @@ public class ChatController {
   }
 
   private List<?> getResponseSpecWithFormat(CallResponseSpec callResponseSpec, String format) {
-    if (format == null || format.equalsIgnoreCase(OutputFormat.JSON.toString())) {
+    if (format == null || format.equalsIgnoreCase(SummaryOutputFormat.JSON.toString())) {
       return callResponseSpec
           .entity(new ParameterizedTypeReference<List<SummaryDTO>>() {
           });
-    } else if (format.equalsIgnoreCase((OutputFormat.String.toString()))) {
+    } else if (format.equalsIgnoreCase((SummaryOutputFormat.String.toString()))) {
       return callResponseSpec
           .entity(new ListOutputConverter(new DefaultConversionService()) {
           });
