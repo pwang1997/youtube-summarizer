@@ -5,3 +5,10 @@ grpc:
     local-grpc-server:
       address: 'static://127.0.0.1:50051'
       negotiationType: plaintext
+spring:
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: 'gpt-4o-mini-2024-07-18'
