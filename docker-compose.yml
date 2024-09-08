@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  youtubeService:
+    build: 
+      context: ./youtube-service
+      dockerfile: Dockerfile
+    environment:
+      - REDIS_HOST: {YOUR_REDIS_HOST}
+      - REDIS_PORT: {YOUR_REDIS_PORT}
+      - REDIS_PASSPORT: {YOUR_REDIS_PASSPORT}
+      - REDIS_SSL_CONFIG: True
+    ports:
+      - "50051:50051"
+  coreService:
+      build: 
+        context: ./core-service
+        dockerfile: Dockerfile
+      environment:
+        - OPEN_API_KEY: {YOUR_OPEN_API_KEY}
+      ports:
+        - "8080:8080"
